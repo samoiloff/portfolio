@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Damir Ismailov — RIA TypeScript developer portfolio">
+  <title>Damir Ismailov — Portfolio</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="profile">
+      <div class="profile__photo">
+        <img src="assets/photo.svg" alt="Damir Ismailov" width="200" height="200">
+      </div>
+
+      <div class="profile__info">
+        <h1 class="profile__name">Damir Ismailov</h1>
+        <p class="profile__role">RIA Typescript developer</p>
+        <div class="profile__actions">
+          <a
+            class="profile__link"
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a class="profile__contact" href="mailto:doomer.samoiloff@gmail.com">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="portfolio">
+      <h2 class="portfolio__title">Works</h2>
+
+      <ul class="portfolio__list">
+        <!--
+          Чтобы добавить работу, скопируйте блок <li>...</li>
+          и замените href, src, alt, заголовок, описание и теги.
+        -->
+        <li>
+          <a
+            class="portfolio__item"
+            href="https://example.com/project-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="portfolio__icon"
+              src="assets/works/example-project.svg"
+              alt="Example Project"
+              width="120"
+              height="120"
+            >
+            <div class="portfolio__content">
+              <h3 class="portfolio__name">Example Project</h3>
+              <p class="portfolio__description">
+                Краткое описание проекта. Замените этот блок своей работой.
+              </p>
+              <ul class="portfolio__tags">
+                <li class="portfolio__tag">React</li>
+                <li class="portfolio__tag">TypeScript</li>
+                <li class="portfolio__tag">Pixi.js</li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="portfolio__item"
+            href="https://example.com/project-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="portfolio__icon"
+              src="assets/works/example-project.svg"
+              alt="Example Project Two"
+              width="120"
+              height="120"
+            >
+            <div class="portfolio__content">
+              <h3 class="portfolio__name">Example Project Two</h3>
+              <p class="portfolio__description">
+                Интерактивное RIA-приложение с анимациями и canvas-рендерингом.
+              </p>
+              <ul class="portfolio__tags">
+                <li class="portfolio__tag">React</li>
+                <li class="portfolio__tag">TypeScript</li>
+                <li class="portfolio__tag">Webpack</li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="portfolio__item"
+            href="https://example.com/project-3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="portfolio__icon"
+              src="assets/works/example-project.svg"
+              alt="Example Project Three"
+              width="120"
+              height="120"
+            >
+            <div class="portfolio__content">
+              <h3 class="portfolio__name">Example Project Three</h3>
+              <p class="portfolio__description">
+                Веб-клиент для real-time данных с модульной архитектурой.
+              </p>
+              <ul class="portfolio__tags">
+                <li class="portfolio__tag">TypeScript</li>
+                <li class="portfolio__tag">Pixi.js</li>
+                <li class="portfolio__tag">WebSocket</li>
+              </ul>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
