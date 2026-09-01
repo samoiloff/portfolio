@@ -290,8 +290,6 @@ body::before {
   background: var(--surface);
   border: 1px solid var(--border);
   color: inherit;
-  text-decoration: none;
-  cursor: pointer;
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -308,9 +306,41 @@ body::before {
     0 16px 40px rgb(0 0 0 / 30%);
 }
 
-.portfolio__item:focus-visible {
+.portfolio__icon-link,
+.portfolio__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.portfolio__icon-link {
+  flex-shrink: 0;
+}
+
+.portfolio__icon-link:focus-visible,
+.portfolio__title-link:focus-visible,
+.portfolio__secondary-link:focus-visible {
   outline: 2px solid var(--accent-from);
   outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.portfolio__title-link {
+  display: block;
+}
+
+.portfolio__secondary-link {
+  display: inline-flex;
+  margin: -6px 0 14px;
+  color: var(--tag-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio__secondary-link:hover {
+  color: #bfdbfe;
+  text-decoration: underline;
 }
 
 .portfolio__icon {

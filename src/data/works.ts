@@ -1,3 +1,8 @@
+export type WorkLink = {
+  label: string;
+  href: string;
+};
+
 export type Work = {
   title: string;
   description: string;
@@ -5,6 +10,7 @@ export type Work = {
   image: string;
   imageAlt: string;
   tags: string[];
+  secondaryLink?: WorkLink;
 };
 
 export const works: Work[] = [

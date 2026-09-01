@@ -11,25 +11,45 @@ export function WorkCard({ work }: WorkCardProps) {
 
   return (
     <li>
-      <a
-        className="portfolio__item"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          className="portfolio__icon"
-          src={assetUrl(work.image)}
-          alt={work.imageAlt}
-          width={120}
-          height={120}
-        />
+      <div className="portfolio__item">
+        <a
+          className="portfolio__icon-link"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="portfolio__icon"
+            src={assetUrl(work.image)}
+            alt={work.imageAlt}
+            width={120}
+            height={120}
+          />
+        </a>
+
         <div className="portfolio__content">
-          <h3 className="portfolio__name">{work.title}</h3>
+          <a
+            className="portfolio__title-link"
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3 className="portfolio__name">{work.title}</h3>
+          </a>
           <p className="portfolio__description">{work.description}</p>
+          {work.secondaryLink && (
+            <a
+              className="portfolio__secondary-link"
+              href={work.secondaryLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {work.secondaryLink.label}
+            </a>
+          )}
           <TagList tags={work.tags} />
         </div>
-      </a>
+      </div>
     </li>
   );
 }

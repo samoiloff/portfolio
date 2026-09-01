@@ -14,7 +14,7 @@ export function Profile() {
 
       <div className="profile__info">
         <h1 className="profile__name">Damir Ismailov</h1>
-        <p className="profile__role">RIA Typescript developer</p>
+        <p className="profile__role">Fullstack Typescript developer</p>
         <div className="profile__actions">
           <a
             className="profile__link profile__link--cv"
