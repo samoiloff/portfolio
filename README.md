@@ -105,6 +105,10 @@ pnpm run dev
 3. На GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**.
 4. Branch: **`deploy`**, folder: **`/ (root)`**.
 
+> **Важно:** источник должен быть именно ветка `deploy`, а не `master`. Если выбран `master`, сайт отдаст dev-версию `index.html` с `/src/main.tsx` — экран будет пустым, в консоли 404.
+
+После смены настроек подождите до 10 минут (кэш GitHub Pages) или выполните `np run deploy` ещё раз.
+
 ### Деплой изменений
 
 ```bash
@@ -112,6 +116,10 @@ np run deploy
 ```
 
 Команда пересобирает проект и обновляет ветку `deploy` на GitHub. Через минуту изменения появятся на https://samoiloff.github.io/portfolio/.
+
+### Проверка деплоя
+
+В исходном коде страницы (View Page Source) должны быть ссылки на `/portfolio/assets/index-….js`, а **не** на `/src/main.tsx`. Если видите `main.tsx` — Pages всё ещё отдаёт ветку `master`.
 
 ---
 
