@@ -17,7 +17,15 @@ export function Profile() {
         <p className="profile__role">RIA Typescript developer</p>
         <div className="profile__actions">
           <a
-            className="profile__link"
+            className="profile__link profile__link--cv"
+            href={assetUrl('assets/Damir_Ismailov_CV_portfolio_2026.pdf')}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          <a
+            className="profile__link profile__link--linkedin"
             href="https://www.linkedin.com/in/damir-ismailov-2746115/"
             target="_blank"
             rel="noopener noreferrer"

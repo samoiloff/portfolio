@@ -136,17 +136,29 @@ body::before {
 }
 
 .profile__link::before {
-  content: "in";
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  background: #0a66c2;
   color: #fff;
   font-size: 0.6875rem;
   font-weight: 700;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+}
+
+.profile__link--cv::before {
+  content: "PDF";
+  background: #e5252a;
+  font-size: 0.4375rem;
+  letter-spacing: 0;
+}
+
+.profile__link--linkedin::before {
+  content: "in";
+  background: #0a66c2;
   letter-spacing: -0.03em;
 }
 
@@ -159,6 +171,7 @@ body::before {
 .profile__contact {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   padding: 10px 22px;
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
@@ -171,6 +184,16 @@ body::before {
     transform 0.2s ease,
     box-shadow 0.2s ease,
     filter 0.2s ease;
+}
+
+.profile__contact::before {
+  content: "";
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ea4335' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") center / 14px no-repeat;
+  flex-shrink: 0;
 }
 
 .profile__contact:hover {
