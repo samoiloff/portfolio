@@ -88,26 +88,30 @@ pnpm run dev
 
 ## Деплой на GitHub Pages
 
-Деплой полностью автоматический через GitHub Actions.
+Собранный сайт публикуется в отдельную ветку `deploy`. GitHub Pages отдаёт **содержимое корня этой ветки** как статический сайт по адресу https://samoiloff.github.io/portfolio/.
 
 ### Как это работает
 
-1. Вы пушите изменения в ветку `master`.
-2. Workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) запускается автоматически.
-3. CI выполняет `pnpm install --frozen-lockfile` → `pnpm run build` → загружает папку `build/` как artifact.
-4. GitHub Pages публикует artifact на https://samoiloff.github.io/portfolio/.
+1. `pnpm run deploy` собирает проект в `build/`.
+2. Пакет `gh-pages` коммитит содержимое `build/` (без самой папки — файлы попадают в корень ветки) и пушит в ветку `deploy`.
+3. GitHub Pages публикует ветку `deploy` на поддомен репозитория.
 
-В репозитории хранятся **только исходники** (`src/`, `public/`, конфиги). Собранный сайт в `master` не коммитится.
+В ветке `master` хранятся **только исходники**. Папка `build/` в `master` не коммитится (`.gitignore`).
 
 ### Первоначальная настройка (один раз)
 
-1. Закоммитьте и запушьте проект в `master`.
-2. На GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Дождитесь успешного завершения workflow во вкладке **Actions**.
+1. Закоммитьте и запушьте исходники в `master`.
+2. Выполните первый деплой: `np run deploy`.
+3. На GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**.
+4. Branch: **`deploy`**, folder: **`/ (root)`**.
 
-### Ручной деплой
+### Деплой изменений
 
-Отдельных команд не нужно — достаточно `git push origin master`. Каждый push в `master` пересобирает и публикует сайт.
+```bash
+np run deploy
+```
+
+Команда пересобирает проект и обновляет ветку `deploy` на GitHub. Через минуту изменения появятся на https://samoiloff.github.io/portfolio/.
 
 ---
 
@@ -120,6 +124,7 @@ pnpm run dev
 | `dev` | `vite` | Запускает dev-сервер с HMR на http://localhost:5173/portfolio/. Используйте для ежедневной разработки и отладки. |
 | `build` | `tsc -b && vite build` | Проверяет типы TypeScript и собирает production-версию в папку `build/`. Используется локально и в CI перед деплоем. |
 | `preview` | `vite preview` | Запускает локальный статический сервер поверх уже собранной папки `build/`. Нужен для проверки production-сборки перед push. Сначала выполните `pnpm run build`. |
+| `deploy` | `pnpm run build && gh-pages …` | Собирает проект и пушит содержимое `build/` в ветку `deploy` для GitHub Pages. |
 
 ### Примеры
 
@@ -131,7 +136,10 @@ np run dev
 np run build
 np run preview
 
-# Установка зависимостей с нуля (как в CI)
+# Деплой на GitHub Pages
+np run deploy
+
+# Установка зависимостей с нуля
 pnpm install --frozen-lockfile
 ```
 
