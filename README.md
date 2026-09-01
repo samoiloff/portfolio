@@ -2,7 +2,7 @@
 
 Клиентское React-приложение (Vite + TypeScript) для портфолио. Сайт собирается в статические файлы и публикуется на GitHub Pages.
 
-**Production URL:** https://samoiloff.github.io/portfolio/
+**Сайт задеплоен и доступен по ссылке:** [https://samoiloff.github.io/portfolio/](https://samoiloff.github.io/portfolio/)
 
 ## Требования
 
