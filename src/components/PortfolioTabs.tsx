@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { experiments } from '../data/experiments';
 import { labs } from '../data/labs';
 import { works } from '../data/works';
 import { WorkList } from './WorkList';
@@ -6,6 +7,7 @@ import { WorkList } from './WorkList';
 const tabs = [
   { id: 'works', label: 'My Works', items: works },
   { id: 'laboratory', label: 'Laboratory', items: labs },
+  { id: 'experiments', label: 'Experiments', items: experiments },
 ] as const;
 
 type TabId = (typeof tabs)[number]['id'];
