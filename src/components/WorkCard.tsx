@@ -1,16 +1,21 @@
+import type { CSSProperties } from 'react';
 import type { Work } from '../data/works';
 import { assetUrl } from '../data/works';
 import { TagList } from './TagList';
 
 type WorkCardProps = {
   work: Work;
+  animationIndex: number;
 };
 
-export function WorkCard({ work }: WorkCardProps) {
+export function WorkCard({ work, animationIndex }: WorkCardProps) {
   const href = work.href.startsWith('http') ? work.href : assetUrl(work.href);
 
   return (
-    <li>
+    <li
+      className="portfolio__list-item"
+      style={{ '--stagger-delay': `${animationIndex * 80}ms` } as CSSProperties}
+    >
       <div className="portfolio__item">
         <a
           className="portfolio__icon-link"

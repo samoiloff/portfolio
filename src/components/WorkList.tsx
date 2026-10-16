@@ -8,8 +8,8 @@ type WorkListProps = {
 export function WorkList({ items }: WorkListProps) {
   return (
     <ul className="portfolio__list">
-      {items.map((work) => (
-        <WorkCard key={work.title} work={work} />
+      {items.map((work, index) => (
+        <WorkCard key={work.title} work={work} animationIndex={index} />
       ))}
     </ul>
   );

@@ -81,7 +81,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 36px;
-  margin-bottom: 72px;
+  margin-bottom: 32px;
   padding: 32px;
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -304,6 +304,27 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@keyframes portfolio-item-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolio__list-item {
+  animation: portfolio-item-enter 0.45s ease-out both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio__list-item {
+    animation: none;
+  }
 }
 
 .portfolio__item {

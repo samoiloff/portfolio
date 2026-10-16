@@ -46,7 +46,7 @@ export function PortfolioTabs() {
           id={`panel-${activeTab}`}
           aria-labelledby={`tab-${activeTab}`}
         >
-          <WorkList items={activeItems} />
+          <WorkList key={activeTab} items={activeItems} />
         </div>
       </div>
     </section>
