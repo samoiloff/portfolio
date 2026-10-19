@@ -50,6 +50,15 @@ export const works: Work[] = [
     tags: ['TypeScript', 'Pixi.js', 'Pixi-particles', 'Spine'],
   },
   {
+    title: 'Skywind Group Slot. Lepry Bunny',
+    description:
+      'Leprechaun-themed slot with golden eggs, free spins, and cheerful bonus features.',
+    href: 'https://casino.guru/free-casino-games/slots/lepry-bunny-slot-play-free',
+    image: 'assets/works/preview_lepry_bunny.jpg',
+    imageAlt: 'Portfolio Project. Lepry Bunny slot.',
+    tags: ['TypeScript', 'Pixi.js', 'Spine'],
+  },
+  {
     title: 'Playtech Slot. Archer',
     description:
       'Archer slot for Playtech. All ways, split symbols, free spins, and Robin Hood–themed gameplay.',
