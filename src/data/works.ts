@@ -15,7 +15,7 @@ export type Work = {
 
 export const works: Work[] = [
   {
-    title: 'Slide Merge Playable',
+    title: 'Moonactive Playable. Slide Merge.',
     description:
       'Playable ad for the Travel Town Project. Click to merge suitcases and fulfil tasks.',
     href: 'html/preview_Slidemerge.html',
@@ -24,7 +24,7 @@ export const works: Work[] = [
     tags: ['TypeScript', 'Pixi.js', 'Three.js', 'Cannon.js', 'GLTF', 'Cursor'],
   },
   {
-    title: 'Farm Optimization',
+    title: 'Moonactive Playable. Farm Optimization',
     description:
       'PLayable ad project for Family Island Project. Sell the goods and upgrade the farm.',
     href: 'html/preview_Cafe_Optimization.html',
@@ -33,7 +33,7 @@ export const works: Work[] = [
     tags: ['Typescript', 'Pixi.js', 'pixi-particles'],
   },
   {
-    title: 'Hole Cleanup',
+    title: 'Moonactive Playable.Hole Cleanup',
     description:
       'Playable ad project for the Hole Project. Cleanup the grass and collect the items.',
     href: 'html/preview_HOL_CleanUp.html',
@@ -42,12 +42,21 @@ export const works: Work[] = [
     tags: ['TypeScript', 'Three.js', 'Cannon.js', 'GLTF', 'Cursor'],
   },
   {
-    title: 'Genie Megareel',
-    description: 'Slot game for the Skywind Group. Click spin and win the prizes.',
+    title: 'Skywind Group Slot. Genie Megareel',
+    description: 'Slot game for the Skywind Group. Expanded wilds, expanded reels, free spins and Aladdin-themed gameplay.',
     href: 'https://skywindgroup.com/en-US/game/sw_gemerenigael',
     image: 'assets/works/preview_genie.jpg',
     imageAlt: 'Portfolio Project. Genie Megareel.',
     tags: ['TypeScript', 'Pixi.js', 'Pixi-particles', 'Spine'],
+  },
+  {
+    title: 'Playtech Slot. Archer',
+    description:
+      'Archer slot for Playtech. All ways, split symbols, free spins, and Robin Hood–themed gameplay.',
+    href: 'https://www.bigwinboard.com/archer-playtech-slot-review/',
+    image: 'assets/works/preview_archer.jpg',
+    imageAlt: 'Portfolio Project. Slot Archer by Playtech.',
+    tags: ['TypeScript', 'Pixi.js'],
   },
   {
     title: 'For your fit',
