@@ -15,6 +15,15 @@ export type Work = {
 
 export const works: Work[] = [
   {
+    title: 'Moonactive Playable. Clear The Path.',
+    description:
+      'PLayable ad project for Family Island Project. Cut trees and open the treasure chest.',
+    href: 'html/preview_ClearThePath.html',
+    image: 'assets/works/clearThePath.jpg',
+    imageAlt: 'Portfolio Project. Clear The Path Playable.',
+    tags: ['Typescript', 'Pixi.js', 'pixi-particles'],
+  },
+  {
     title: 'Moonactive Playable. Slide Merge.',
     description:
       'Playable ad for the Travel Town Project. Click to merge suitcases and fulfil tasks.',
