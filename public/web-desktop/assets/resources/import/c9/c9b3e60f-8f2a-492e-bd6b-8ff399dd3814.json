@@ -1,0 +1,1 @@
+[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"timer",{"x":90,"y":90,"children":{"bg":{"type":"NineSliceSprite","texture":"cell_bg_gold.png","w":900,"padding":[10,10,10,10]},"progress":{"type":"NineSliceSprite","texture":"cell_gem.png","w":20,"padding":[10,10,10,10]}}}]],0,0,[],[],[]]

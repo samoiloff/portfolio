@@ -1,0 +1,1 @@
+[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"mainMenu",{"type":"MainMenuElement","children":{"achievementsBtn":{"layout":"btns/achievementsBtn","x":-400},"inventoryBtn":{"layout":"btns/inventoryBtn","x":-133},"mapBtn":{"layout":"btns/mapBtn","x":133},"shopBtn":{"layout":"btns/shopBtn","x":400}}}]],0,0,[],[],[]]
